@@ -1,0 +1,18 @@
+<van-nav-bar
+        fixed
+        placeholder
+        title="{{title}}"
+        left-arrow="{{!search && canBack ? true : false}}"
+        bind:click-left="handleClickLeft"
+        border="{{false}}">
+    <view slot="left" wx:if="{{search}}">
+        <van-button round
+                    plain
+                    type="default"
+                    icon="search"
+                    size="small"
+                    class="px-6 border-0">
+            课程搜索
+        </van-button>
+    </view>
+</van-nav-bar>

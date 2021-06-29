@@ -1,0 +1,101 @@
+module.exports = {
+
+    // 学习列表tag文字
+    studyTextObject: function (t) {
+        if (t) {
+            if (t == 1) {
+                return '学习中'
+            } else {
+                return '已学习'
+            }
+        } else {
+            return '0'
+        }
+    },
+
+    // 学习列表tag颜色
+    studyColorObject: function (c) {
+        if (c) {
+            if (c == 1) {
+                return '#fb5'
+            } else {
+                return '#4cd'
+            }
+        } else {
+            return '#46f'
+        }
+    },
+
+    // 考试列表tag文字
+    examTextObject: function (state, score) {
+        var text = {
+            '0': '学时不足',
+            '1': '去考试',
+            '2': '重新考',
+            '3': '重新考'
+        }
+        if (score != null) {
+            return score + '分'
+        } else {
+            return text[state.toString()]
+        }
+    },
+
+    // 考试列表tag颜色
+    examColorObject: function (c) {
+        // console.log(c);
+        var color = {
+            '0': '#fb5',
+            '1': '#46f',
+            '2': '#04BF00',
+            '3': '#04BF00'
+        }
+        return color[c.toString()]
+    },
+
+    // 在线考试题型
+    typeObject: function (t) {
+        if (t) {
+            var type = {
+                '1': '判断题',
+                '2': '单选题',
+                '3': '多选题',
+            }
+            return type[t.toString()]
+        }
+    },
+
+    // 在线考试考试帮助图例说明
+    handleActiveNames: function (activeNames, item) {
+        var str = activeNames.indexOf(item.toString()) != -1 ? "minus" : "plus"
+
+        return str
+    },
+
+    // 秒转分钟
+    formatSecond: function (second){
+        return parseInt(second / 60);
+    },
+
+    // 判断是否新课程
+    isNew: function (loginTime, createTime) {
+        if (loginTime) {
+            var reg = getRegExp('-','g');
+            var loginT = Date.parse(getDate(loginTime.replace(reg, '/')));
+            var createT = Date.parse(getDate(createTime.replace(reg, '/')));
+
+            if (loginT < createT) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return true
+        }
+    },
+
+    // 截取String时间yyyy-MM-dd
+    subTime: function (str) {
+        return str.substring(0, 10)
+    }
+}

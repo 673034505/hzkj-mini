@@ -1,0 +1,28 @@
+/**app.wxss**/
+@import 'assets/css/tailwind.wxss';
+
+page {
+  background-color: #f7f7f7;
+  padding-bottom: 48px;
+}
+
+.van-nav-bar {
+  background-color: #F7F7F7 !important;
+}
+
+.van-nav-bar button {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.van-nav-bar .van-icon {
+  color: #1989fa;
+}
+
+.van-nav-bar.van-nav-bar--fixed{
+  z-index: 99!important;
+}
+
+.border-0 {
+  border: none!important;
+}

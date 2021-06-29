@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/account/account",
+    "pages/myInfo/myInfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+   "color": "#7A7E83",
+   "selectedColor": "#1989fa",
+   "borderStyle": "black" ,
+   "list": [{
+     "selectedIconPath": "assets/tabIcons/icon1_active.png",
+     "iconPath": "assets/tabIcons/icon1.png",
+     "pagePath": "pages/home/home",
+     "text": "首页"
+   }, {
+     "selectedIconPath": "assets/tabIcons/icon2_active.png",
+     "iconPath": "assets/tabIcons/icon2.png",
+     "pagePath": "pages/logs/logs",
+     "text": "打印"
+   },{
+     "selectedIconPath": "assets/tabIcons/icon3_active.png",
+     "iconPath": "assets/tabIcons/icon3.png",
+     "pagePath": "pages/myInfo/myInfo",
+     "text": "我的"
+   }
+   ]
+ },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-transition": "@vant/weapp/transition/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "remix-icon": "/components/remixicon v2.5.0/index"
+  }
+}
